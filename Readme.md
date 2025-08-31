@@ -10,11 +10,11 @@ RAG stands for Retrieval-Augmented Generation. It's like combining two superpowe
 
 Imagine you're writing an essay, but instead of only using what you remember, you can quickly search through all your textbooks and notes to find the exact information you need. That's exactly what RAG does for AI!
 
-# Core Components of RAG
-## 📄 Documents
+## Core Components of RAG
+### 📄 Documents
 - Documents form the foundation of any RAG system, serving as the primary knowledge source.
 
-## Advantages:
+#### Advantages:
 - Rich Information Source: Provide comprehensive, detailed knowledge on specific topics
 
 - Authoritative Content: Can include verified, expert-reviewed materials
