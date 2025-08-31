@@ -34,4 +34,23 @@ st.set_page_config(page_title='RAG with Langchain',page_icon='H',layout='wide')
 st.title("RAG Application with Langchain")
 
 
-upload_file=st.file_uploader("Please Upload the file ......",type=[".pdf",".docx",''])
+upload_file=st.file_uploader("Please Upload the file ......",type=[".pdf",".docx",'.txt'])
+
+if upload_file:
+    with st.spinner('File uploading ..please wait for a moment'):
+        file_path=f"temp_{upload_file}"
+        with open(file_path,'wb') as f:
+            f.write(upload_file.read())
+
+    
+
+        if upload_file.name.endswith('.pdf'):
+            loader=PyMuPDFLoader(file_path)
+        elif upload_file.name.endswith('.docx'):
+            loader=Docx2txtLoader(file_path)
+        else:
+            loader=TextLoader(file_path)
+
+        docs=loader.load()
+
+
