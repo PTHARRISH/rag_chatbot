@@ -25,7 +25,7 @@ Imagine you're writing an essay, but instead of only using what you remember, yo
 
 - Version Control: Easy to update and maintain knowledge base currency
 
-## Disadvantages:
+#### Disadvantages:
 - Quality Dependency: System performance directly tied to document quality and relevance
 
 - Storage Requirements: Large document collections require significant storage infrastructure
@@ -36,10 +36,10 @@ Imagine you're writing an essay, but instead of only using what you remember, yo
 
 - Maintenance Burden: Requires ongoing updates to keep information current
 
-# ✂️ Text Splitters
+### ✂️ Text Splitters
 - Text splitters break down large documents into smaller, manageable chunks for processing and retrieval.
 
-## Advantages:
+#### Advantages:
 - Improved Retrieval Precision: Smaller chunks enable more targeted information retrieval
 
 - Processing Efficiency: Reduces computational load on embedding and LLM operations
@@ -50,7 +50,7 @@ Imagine you're writing an essay, but instead of only using what you remember, yo
 
 - Memory Optimization: Prevents memory overflow with large documents
 
-## Disadvantages:
+#### Disadvantages:
 - Context Fragmentation: Important information may be split across multiple chunks
 
 - Semantic Boundary Issues: Splitting may occur mid-sentence or mid-concept
@@ -61,10 +61,10 @@ Imagine you're writing an essay, but instead of only using what you remember, yo
 
 - Increased Complexity: Adds another layer of preprocessing and parameter tuning
 
-# 🧮 Embeddings
+### 🧮 Embeddings
 - Embeddings convert text into dense vector representations that capture semantic meaning and relationships.
 
-## Advantages:
+#### Advantages:
 - Semantic Understanding: Captures meaning beyond simple keyword matching
 
 - Similarity Computation: Enables efficient similarity search and ranking
@@ -75,7 +75,7 @@ Imagine you're writing an essay, but instead of only using what you remember, yo
 
 - Scalable Search: Efficient vector operations enable fast similarity searches
 
-## Disadvantages:
+#### Disadvantages:
 - Model Dependency: Quality heavily depends on the underlying embedding model
 
 - Computational Cost: Generating embeddings requires significant processing power
@@ -86,10 +86,10 @@ Imagine you're writing an essay, but instead of only using what you remember, yo
 
 - Update Complexity: Changing embedding models requires reprocessing entire knowledge base
 
-# 🗄️ Vector Store
+### 🗄️ Vector Store
 - Vector stores are specialized databases designed to efficiently store, index, and search high-dimensional embeddings.
 
-## Advantages:
+#### Advantages:
 - Fast Similarity Search: Optimized algorithms (ANN, HNSW) enable rapid retrieval
 
 - Horizontal Scaling: Can handle millions of vectors across distributed systems
@@ -100,7 +100,7 @@ Imagine you're writing an essay, but instead of only using what you remember, yo
 
 - Real-time Updates: Many systems support dynamic insertion and deletion
 
-## Disadvantages:
+#### Disadvantages:
 - Infrastructure Complexity: Requires specialized database setup and maintenance
 
 - Memory Requirements: High-performance search often requires vectors in memory
@@ -111,10 +111,10 @@ Imagine you're writing an essay, but instead of only using what you remember, yo
 
 - Cost Scaling: Storage and compute costs can grow significantly with data size
 
-# 🔍 Retriever
+### 🔍 Retriever
 - The retriever component searches the vector store to find the most relevant documents for a given query.
 
-## Advantages:
+#### Advantages:
 - Relevance Optimization: Advanced algorithms improve retrieval accuracy
 
 - Query Flexibility: Supports various query types and reformulation strategies
@@ -125,7 +125,7 @@ Imagine you're writing an essay, but instead of only using what you remember, yo
 
 - Performance Tuning: Adjustable parameters for precision-recall trade-offs
 
-## Disadvantages:
+#### Disadvantages:
 - Parameter Sensitivity: Requires careful tuning of similarity thresholds and result counts
 
 - Query Dependency: Performance varies significantly based on query quality and specificity
@@ -136,10 +136,10 @@ Imagine you're writing an essay, but instead of only using what you remember, yo
 
 - Evaluation Challenges: Difficult to objectively measure retrieval quality
 
-# 🤖 LLM (Large Language Model)
+### 🤖 LLM (Large Language Model)
 - The LLM generates the final response using both the original query and retrieved contextual information.
 
-## Advantages:
+#### Advantages:
 - Natural Language Generation: Produces human-like, coherent responses
 
 - Context Integration: Effectively combines retrieved information with query understanding
@@ -150,7 +150,7 @@ Imagine you're writing an essay, but instead of only using what you remember, yo
 
 - Continuous Improvement: Benefits from ongoing model advances and fine-tuning
 
-## Disadvantages:
+#### Disadvantages:
 - Computational Intensity: Requires significant processing power and memory
 
 - Hallucination Risk: May generate plausible but incorrect information despite retrieved context
