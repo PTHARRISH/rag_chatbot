@@ -33,8 +33,8 @@ embeddings = GoogleGenerativeAIEmbeddings(
 
 
 # Streamlit APP
-st.set_page_config(page_title="RAG with Langchain", page_icon="H", layout="wide")
-st.title("RAG Application with Langchain")
+st.set_page_config(page_title="📂 RAG with Langchain", page_icon="H", layout="wide")
+st.title("📂 RAG Application with Langchain")
 
 
 upload_file = st.file_uploader(
@@ -76,19 +76,19 @@ if upload_file:
         qa = RetrievalQA.from_chain_type(
             llm=llm, retriever=retriever, return_source_documents=True
         )
-        st.success("File Process...")
+        st.success("File processed successfully!")
 
         # User Query
         user_query = st.text_input("User Input")
 
         if user_query:
-            if st.button("Get the Answer"):
-                with st.spinner("Getting Answer .... Please Wait"):
+            if st.button("Get Answer"):
+                with st.spinner("Fetching answer... 🤔"):
                     response = qa(user_query)
-                    st.subheader("Answer:")
+                    st.subheader("💡 Answer")
                     st.write(response["result"])
 
-                    st.subheader("Source or Metadata")
+                    st.subheader("📎 Sources / Metadata")
 
                     for i, docs in enumerate(response["source_documents"], 1):
                         st.markdown(f"**Source {i}: **{docs.metadata}")
