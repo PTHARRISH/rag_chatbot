@@ -43,7 +43,10 @@ upload_file = st.file_uploader(
 
 if upload_file:
     with st.spinner("File uploading ..please wait for a moment"):
-        file_path = f"temp_{upload_file.name}"
+        temp_folder = "temp"
+        os.makedirs(temp_folder, exist_ok=True)
+        # Save file in the temp folder
+        file_path = os.path.join(temp_folder, upload_file.name)
         with open(file_path, "wb") as f:
             f.write(upload_file.read())
 
