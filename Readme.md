@@ -2,6 +2,8 @@
 
 A Retrieval-Augmented Generation (RAG) application built with Streamlit and Langchain, powered by Google's Gemini AI models. This application allows users to upload documents and interact with them through intelligent Q&A.
 
+![RAG Application Screenshot](notes/image.png)
+
 ## 🌟 Features
 
 - **Document Upload**: Support for PDF, DOCX, and TXT file formats
